@@ -1,0 +1,25 @@
+mkdir GitPractice
+cd GitPractice
+
+git init
+
+touch README.md
+git add README.md
+git commit -m "Add initial README file"
+
+git add README.md
+git commit -m "Update README with project features"
+
+git log --oneline
+
+git checkout -b feature/new-feature
+
+touch new-feature.txt
+git add new-feature.txt
+git commit -m "Add new-feature.txt"
+
+git checkout main
+git merge feature/new-feature
+
+git remote add origin https://github.com/<username>/GitPractice.git
+git push -u origin main
